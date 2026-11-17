@@ -12,7 +12,7 @@ Open `script.js` and edit the `CONFIG` block at the top:
 
 | Setting | What it does |
 | --- | --- |
-| `CONTACT_EMAIL` | The address booking enquiries go to. **Replace the placeholder.** |
+| `CONTACT_EMAIL` | The address booking enquiries go to (currently bookings@theruestandard.com). |
 | `FORM_ENDPOINT` | Optional. Paste a [Formspree](https://formspree.io) (or similar) form URL so enquiries are sent straight from the page. If you leave it empty, the visitor's email app opens with the enquiry already written. |
 | `LINKEDIN_URL` | Rue's LinkedIn profile URL. |
 

@@ -9,7 +9,7 @@
    3. LINKEDIN_URL: Rue's LinkedIn profile.
    ========================================================== */
 const CONFIG = {
-  CONTACT_EMAIL: "bookings@theruestandard.com", // TODO: replace with your real address
+  CONTACT_EMAIL: "bookings@theruestandard.com",
   FORM_ENDPOINT: "",
   LINKEDIN_URL: "https://www.linkedin.com/in/ruvimbo-karimazondo",
 };
