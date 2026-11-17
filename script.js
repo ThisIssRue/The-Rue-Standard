@@ -53,14 +53,15 @@ const CONFIG = {
     items.forEach((el) => el.classList.add("is-in"));
   }
 
-  // Episode poster lightbox
+  // Lightbox for episode posters and gallery photos
   const lb = document.getElementById("lightbox");
   const lbImg = lb.querySelector("img");
-  document.querySelectorAll(".episode").forEach((ep) =>
-    ep.addEventListener("click", () => {
-      lbImg.src = ep.dataset.poster;
-      lbImg.alt = ep.getAttribute("aria-label").replace("View ", "");
-      if (lb.showModal) lb.showModal(); else window.open(ep.dataset.poster, "_blank");
+  document.querySelectorAll("[data-poster], [data-full]").forEach((el) =>
+    el.addEventListener("click", () => {
+      const src = el.dataset.poster || el.dataset.full;
+      lbImg.src = src;
+      lbImg.alt = el.getAttribute("aria-label").replace(/^View (photo: )?/, "");
+      if (lb.showModal) lb.showModal(); else window.open(src, "_blank");
     })
   );
   lb.querySelector(".lightbox__close").addEventListener("click", () => lb.close());

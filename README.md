@@ -18,7 +18,7 @@ Open `script.js` and edit the `CONFIG` block at the top:
 
 ### Photos
 - **Photos:** portraits and episode posters live in `assets/` (`rue-*.jpg`, `episode-0N.jpg`). To add a new episode, save its poster as `assets/episode-06.jpg` and copy one of the episode buttons in `index.html`.
-- **In the Room gallery:** replace the "Photo coming soon" placeholders in the `#media` section of `index.html` with `<img>` tags, event names, dates and descriptions.
+- **In the Room gallery:** event photos live in `assets/gallery/`. To add one, save the photo there and copy one of the `<figure class="shot">` blocks in the `#media` section of `index.html`, then update its caption.
 
 ### Booking links
 Any link to `#book` with `data-service="speaking|protocol|etiquette|events|brand|media"` selects that service in the booking form. `?service=brand#book` works in shared URLs too.
