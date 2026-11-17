@@ -11,7 +11,7 @@
 const CONFIG = {
   CONTACT_EMAIL: "bookings@theruestandard.com", // TODO: replace with your real address
   FORM_ENDPOINT: "",
-  LINKEDIN_URL: "https://www.linkedin.com/",
+  LINKEDIN_URL: "https://www.linkedin.com/in/ruvimbo-karimazondo",
 };
 
 (function () {
