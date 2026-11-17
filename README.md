@@ -17,7 +17,7 @@ Open `script.js` and edit the `CONFIG` block at the top:
 | `LINKEDIN_URL` | Rue's LinkedIn profile URL. |
 
 ### Photos
-- **Portrait:** save a photo as `assets/rue.jpg` (portrait orientation, about 4:5). Until then, a gold "Rue" monogram is shown.
+- **Photos:** portraits and episode posters live in `assets/` (`rue-*.jpg`, `episode-0N.jpg`). To add a new episode, save its poster as `assets/episode-06.jpg` and copy one of the episode buttons in `index.html`.
 - **In the Room gallery:** replace the "Photo coming soon" placeholders in the `#media` section of `index.html` with `<img>` tags, event names, dates and descriptions.
 
 ### Booking links

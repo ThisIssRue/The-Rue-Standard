@@ -8,6 +8,7 @@
   <meta property="og:title" content="The Rue Standard">
   <meta property="og:description" content="Protocol. Presence. Power. Book Rue for speaking, protocol, etiquette, diplomacy, events and brand.">
   <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:image" content="assets/rue-standing.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,7 @@
     <section class="hero">
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="hero__inner">
+        <div class="hero__text">
         <p class="eyebrow">Ruvimbo Karimazondo</p>
         <h1 class="hero__title">The <em>Rue</em> Standard</h1>
         <p class="hero__tag">Protocol <i>·</i> Presence <i>·</i> Power</p>
@@ -53,6 +55,10 @@
           <a href="#book" class="btn btn--gold" data-service="speaking">Book Rue to Speak</a>
           <a href="#services" class="btn btn--ghost">Explore Services</a>
         </div>
+        </div>
+        <figure class="hero__photo">
+          <img src="assets/rue-standing.jpg" alt="Ruvimbo Karimazondo in a black suit, standing in her office" width="734" height="1306" fetchpriority="high">
+        </figure>
       </div>
       <ul class="pillars" aria-label="Pillars">
         <li>Protocol</li><li>Etiquette</li><li>Events</li><li>Brand</li>
@@ -91,7 +97,7 @@
       <div class="container about">
         <figure class="portrait reveal">
           <div class="portrait__frame">
-            <img src="assets/rue.jpg" alt="Ruvimbo Karimazondo" onerror="this.remove()">
+            <img src="assets/rue-seated.jpg" alt="Ruvimbo Karimazondo seated at her desk" width="734" height="1306" loading="lazy">
             <span class="portrait__mono" aria-hidden="true">Rue</span>
           </div>
         </figure>
@@ -199,10 +205,26 @@
           <p>Rue’s signature series shares practical, polished guidance for professionals who want to lead with presence.</p>
         </header>
         <div class="episodes">
-          <div class="episode reveal"><span>Episode 01</span><h3>Your Professional Presence Speaks Before You Do</h3></div>
-          <div class="episode reveal"><span>Episode 02</span><h3>Professional Communication</h3></div>
-          <div class="episode reveal"><span>Episode 03</span><h3>Meetings and Boardroom Etiquette</h3></div>
-          <div class="episode reveal"><span>Episode 04</span><h3>Networking with Intent</h3></div>
+          <button type="button" class="episode reveal" data-poster="assets/episode-01.jpg" aria-label="View Episode 01: Your Professional Presence Speaks Before You Do">
+            <img src="assets/episode-01.jpg" alt="" width="900" height="900" loading="lazy">
+            <span class="episode__meta"><span>Episode 01</span><strong>Your Professional Presence Speaks Before You Do</strong></span>
+          </button>
+          <button type="button" class="episode reveal" data-poster="assets/episode-02.jpg" aria-label="View Episode 02: Professional Communication">
+            <img src="assets/episode-02.jpg" alt="" width="900" height="900" loading="lazy">
+            <span class="episode__meta"><span>Episode 02</span><strong>Professional Communication</strong></span>
+          </button>
+          <button type="button" class="episode reveal" data-poster="assets/episode-03.jpg" aria-label="View Episode 03: Meetings &amp; Boardroom Etiquette">
+            <img src="assets/episode-03.jpg" alt="" width="900" height="900" loading="lazy">
+            <span class="episode__meta"><span>Episode 03</span><strong>Meetings &amp; Boardroom Etiquette</strong></span>
+          </button>
+          <button type="button" class="episode reveal" data-poster="assets/episode-04.jpg" aria-label="View Episode 04: Networking with Intent">
+            <img src="assets/episode-04.jpg" alt="" width="900" height="900" loading="lazy">
+            <span class="episode__meta"><span>Episode 04</span><strong>Networking with Intent</strong></span>
+          </button>
+          <button type="button" class="episode reveal" data-poster="assets/episode-05.jpg" aria-label="View Episode 05: Networking Etiquette">
+            <img src="assets/episode-05.jpg" alt="" width="900" height="900" loading="lazy">
+            <span class="episode__meta"><span>Episode 05</span><strong>Networking Etiquette</strong></span>
+          </button>
         </div>
         <div class="center reveal">
           <p>Follow the full series on LinkedIn and join the conversation with <strong class="gold">#BusinessEtiquetteWithRue</strong>.</p>
@@ -246,6 +268,7 @@
         <div class="book__intro reveal">
           <p class="eyebrow">Book &amp; Enquire</p>
           <h2>Let’s Raise the Standard</h2>
+          <img class="book__photo" src="assets/rue-smile.jpg" alt="Black and white portrait of Rue smiling" width="864" height="1184" loading="lazy">
           <p>For speaking engagements, protocol and diplomacy advisory, etiquette training, event management or brand partnerships, please get in touch.</p>
           <ol class="steps">
             <li><strong>Share your brief.</strong> Choose a service and tell us about your occasion.</li>
@@ -310,14 +333,22 @@
 
     <!-- CLOSING CTA -->
     <section class="closing">
-      <div class="container center reveal">
-        <p class="signature signature--lg">Rue</p>
-        <h2>Ready to raise your standard?</h2>
-        <p>Let’s talk.</p>
-        <a href="#book" class="btn btn--gold">Book a Consultation</a>
+      <div class="container closing__grid reveal">
+        <img class="closing__photo" src="assets/rue-laughing.jpg" alt="Black and white portrait of Rue laughing" width="864" height="1184" loading="lazy">
+        <div>
+          <p class="signature signature--lg">Rue</p>
+          <h2>Ready to raise your standard?</h2>
+          <p>Let’s talk.</p>
+          <a href="#book" class="btn btn--gold">Book a Consultation</a>
+        </div>
       </div>
     </section>
   </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Episode poster">
+    <button type="button" class="lightbox__close" aria-label="Close">×</button>
+    <img src="" alt="">
+  </dialog>
 
   <footer class="footer">
     <div class="container footer__inner">

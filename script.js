@@ -53,6 +53,19 @@ const CONFIG = {
     items.forEach((el) => el.classList.add("is-in"));
   }
 
+  // Episode poster lightbox
+  const lb = document.getElementById("lightbox");
+  const lbImg = lb.querySelector("img");
+  document.querySelectorAll(".episode").forEach((ep) =>
+    ep.addEventListener("click", () => {
+      lbImg.src = ep.dataset.poster;
+      lbImg.alt = ep.getAttribute("aria-label").replace("View ", "");
+      if (lb.showModal) lb.showModal(); else window.open(ep.dataset.poster, "_blank");
+    })
+  );
+  lb.querySelector(".lightbox__close").addEventListener("click", () => lb.close());
+  lb.addEventListener("click", (e) => e.target === lb && lb.close());
+
   // Booking form
   const form = document.getElementById("booking-form");
   const status = form.querySelector(".form__status");
