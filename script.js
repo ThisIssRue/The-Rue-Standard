@@ -12,6 +12,11 @@ const CONFIG = {
   CONTACT_EMAIL: "bookings@theruestandard.com",
   FORM_ENDPOINT: "",
   LINKEDIN_URL: "https://www.linkedin.com/in/ruvimbo-karimazondo",
+  // Payment links. Paste your hosted payment page URLs here, e.g. a Paynow
+  // payment link (Visa/Mastercard) and a PayPal.Me or PayPal invoice link.
+  // While empty, the buttons take visitors to the booking form instead.
+  PAY_CARD_URL: "",
+  PAY_PAYPAL_URL: "",
 };
 
 (function () {
@@ -20,6 +25,22 @@ const CONFIG = {
 
   // LinkedIn links
   document.querySelectorAll('[data-link="linkedin"]').forEach((a) => (a.href = CONFIG.LINKEDIN_URL));
+
+  // Payment buttons
+  document.querySelectorAll("[data-pay]").forEach((a) => {
+    const url = a.dataset.pay === "card" ? CONFIG.PAY_CARD_URL : CONFIG.PAY_PAYPAL_URL;
+    if (url) {
+      a.href = url; a.target = "_blank"; a.rel = "noopener";
+    } else {
+      a.addEventListener("click", () => {
+        const st = document.querySelector(".form__status");
+        if (st) {
+          st.textContent = "Online payment opens once your booking is confirmed. Send your enquiry and we’ll include a secure payment link with your invoice.";
+          st.className = "form__status ok";
+        }
+      });
+    }
+  });
 
   // Nav: scrolled state + mobile menu
   const nav = document.querySelector(".nav");

@@ -15,6 +15,8 @@ Open `script.js` and edit the `CONFIG` block at the top:
 | `CONTACT_EMAIL` | The address booking enquiries go to (currently bookings@theruestandard.com). |
 | `FORM_ENDPOINT` | Optional. Paste a [Formspree](https://formspree.io) (or similar) form URL so enquiries are sent straight from the page. If you leave it empty, the visitor's email app opens with the enquiry already written. |
 | `LINKEDIN_URL` | Rue's LinkedIn profile URL. |
+| `PAY_CARD_URL` | A hosted card payment link (Visa/Mastercard), e.g. from Paynow. Empty = button sends visitors to the booking form. |
+| `PAY_PAYPAL_URL` | A PayPal.Me or PayPal payment link. Empty = button sends visitors to the booking form. |
 
 ### Photos
 - **Photos:** portraits and episode posters live in `assets/` (`rue-*.jpg`, `episode-0N.jpg`). To add a new episode, save its poster as `assets/episode-06.jpg` and copy one of the episode buttons in `index.html`.
