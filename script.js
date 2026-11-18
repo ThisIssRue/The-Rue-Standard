@@ -17,6 +17,9 @@ const CONFIG = {
   // While empty, the buttons take visitors to the booking form instead.
   PAY_CARD_URL: "",
   PAY_PAYPAL_URL: "",
+  // WhatsApp number for the floating Concierge button, digits only with
+  // country code (e.g. "263771234567"). Leave empty to hide the button.
+  WHATSAPP_NUMBER: "",
 };
 
 (function () {
@@ -25,6 +28,14 @@ const CONFIG = {
 
   // LinkedIn links
   document.querySelectorAll('[data-link="linkedin"]').forEach((a) => (a.href = CONFIG.LINKEDIN_URL));
+
+  // WhatsApp concierge
+  const concierge = document.getElementById("concierge");
+  if (concierge && CONFIG.WHATSAPP_NUMBER) {
+    const msg = "Good day, I would like to enquire about booking Rue.";
+    concierge.href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    concierge.hidden = false;
+  }
 
   // Payment buttons
   document.querySelectorAll("[data-pay]").forEach((a) => {

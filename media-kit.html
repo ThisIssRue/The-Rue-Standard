@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Kit | The Rue Standard</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f0e6; --bg-2: #efe5d6; --esp: #2a1d15; --text: #2a1c14; --body: #4b3a2e; --muted: #7a6656;
+      --gold: #8e6a2e; --gold-d: #c9a25a; --gold-hi: #e6cb8e; --line: rgba(142,106,46,.3);
+      --serif: "Cormorant Garamond", Georgia, serif; --script: "Great Vibes", cursive; --sans: "Jost", system-ui, sans-serif;
+    }
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html { background: #d9cdbb; }
+    body { margin: 0; font: 300 10pt/1.55 var(--sans); color: var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 210mm; height: 297mm; margin: 10mm auto; background: var(--bg); position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.15); }
+    .frame { position: absolute; inset: 8mm; border: 0.6pt solid var(--line); pointer-events: none; }
+    .frame::after { content: ""; position: absolute; inset: 1.6mm; border: 0.4pt solid var(--line); }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--text); margin: 0; line-height: 1.1; }
+    .eyebrow { font: 500 6.8pt/1.3 var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin: 0 0 2.5mm; }
+    p { margin: 0 0 3mm; }
+    .gold { color: var(--gold); }
+
+    /* Page 1 */
+    .hero { display: grid; grid-template-columns: 1fr 74mm; height: 128mm; }
+    .hero__text { padding: 22mm 10mm 0 20mm; }
+    .brand { font: 500 7pt/1 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--text); margin-bottom: 14mm; }
+    .brand b { font: 22pt/1 var(--script); color: var(--gold); letter-spacing: 0; text-transform: none; font-weight: 400; vertical-align: -3pt; margin: 0 1mm; }
+    h1 { font-size: 34pt; font-weight: 400; }
+    h1 em { font: normal 1.25em/0.8 var(--script); color: var(--gold); }
+    .tag { font: 400 11pt/1 var(--serif); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin: 5mm 0 6mm; }
+    .role { font: italic 13pt/1.35 var(--serif); color: var(--text); }
+    .hero__photo { position: relative; margin: 14mm 14mm 0 0; }
+    .hero__photo::before { content: ""; position: absolute; inset: -3mm 3mm 3mm -3mm; border: 0.6pt solid var(--gold); }
+    .hero__photo img { position: relative; width: 100%; height: 108mm; object-fit: cover; object-position: top; display: block; }
+    .bio { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; padding: 6mm 20mm 0; }
+    .bio p { font-size: 9.4pt; }
+    .quote { font: italic 14pt/1.35 var(--serif); color: var(--gold); border-left: 0.8pt solid var(--gold); padding-left: 4mm; margin: 2mm 0 0; }
+    .quote span { display: block; font: 20pt/1 var(--script); margin-top: 1.5mm; }
+    .strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; padding: 4mm 20mm 0; }
+    .strip figure { margin: 0; }
+    .strip img { width: 100%; height: 34mm; object-fit: cover; display: block; border: 0.5pt solid var(--line); }
+    .strip figcaption { font-size: 6.6pt; letter-spacing: .08em; color: var(--muted); margin-top: 1.2mm; line-height: 1.3; }
+    .award { position: absolute; left: 0; right: 0; bottom: 0; height: 52mm; background: var(--esp); color: #e2d6c4; padding: 9mm 20mm; display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+    .award .eyebrow { color: var(--gold-d); }
+    .award h3 { color: #f4ecdf; font-size: 13pt; margin-bottom: 2mm; }
+    .award p { font-size: 8.8pt; margin: 0 0 2mm; }
+    .award strong { color: var(--gold-hi); font-weight: 500; }
+
+    /* Page 2 */
+    .p2 { padding: 18mm 20mm 0; }
+    .p2 h2 { font-size: 22pt; margin-bottom: 5mm; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+    ol.topics { list-style: none; padding: 0; margin: 0; counter-reset: t; }
+    ol.topics li { counter-increment: t; display: grid; grid-template-columns: 8mm 1fr; padding: 2.4mm 0; border-bottom: 0.4pt solid var(--line); }
+    ol.topics li::before { content: counter(t, decimal-leading-zero); font: italic 11pt/1.2 var(--serif); color: var(--gold); }
+    ol.topics strong { display: block; font: 500 11.5pt/1.2 var(--serif); color: var(--text); }
+    ol.topics span { font-size: 8.4pt; color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 2mm; margin: 0 0 6mm; padding: 0; list-style: none; }
+    .chips li { border: 0.5pt solid var(--line); padding: 1.2mm 3mm; font-size: 8.2pt; color: var(--text); }
+    .svc { list-style: none; padding: 0; margin: 0 0 6mm; }
+    .svc li { padding: 1.6mm 0; border-bottom: 0.4pt solid var(--line); font-size: 9pt; }
+    .svc strong { font: 500 11pt/1.2 var(--serif); color: var(--text); display: block; }
+    .featured { border: 0.6pt solid var(--gold); padding: 5mm 6mm; margin: 6mm 0; background: rgba(142,106,46,.05); }
+    .featured h3 { font-size: 13.5pt; margin-bottom: 2mm; }
+    .featured p { font-size: 8.8pt; margin: 0; }
+    .rooms { font-size: 8.6pt; color: var(--body); margin: 0; padding-left: 4mm; }
+    .rooms li { margin-bottom: 1mm; }
+    .contact { position: absolute; left: 0; right: 0; bottom: 0; height: 46mm; background: var(--esp); color: #e2d6c4; padding: 9mm 20mm; display: grid; grid-template-columns: 1.1fr 1fr; gap: 10mm; align-items: center; }
+    .contact .eyebrow { color: var(--gold-d); }
+    .contact h3 { font-size: 17pt; color: #f4ecdf; }
+    .contact h3 em { font-family: var(--script); font-style: normal; color: var(--gold-d); font-size: 1.4em; }
+    .contact p { margin: 0 0 1.4mm; font-size: 9pt; }
+    .contact a { color: var(--gold-hi); text-decoration: none; }
+    .contact .fees { font: italic 10pt/1.3 var(--serif); color: var(--gold-hi); margin-top: 2mm; }
+
+    .bar { max-width: 210mm; margin: 10mm auto 0; display: flex; gap: 10px; justify-content: flex-end; font-family: var(--sans); }
+    .bar a { padding: 10px 18px; background: var(--gold); color: #fff; text-decoration: none; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+    .bar a.ghost { background: transparent; color: var(--esp); border: 1px solid var(--gold); }
+    @media screen and (max-width: 820px) {
+      .page { transform-origin: top left; }
+    }
+    @media print { html { background: none; } .page { margin: 0; box-shadow: none; break-after: page; } .page:last-of-type { break-after: auto; } .bar { display: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="bar"><a class="ghost" href="index.html">← Back to site</a><a href="assets/the-rue-standard-media-kit.pdf" download>Download PDF</a></div>
+
+  <section class="page">
+    <div class="frame"></div>
+    <div class="hero">
+      <div class="hero__text">
+        <p class="brand">The<b>Rue</b>Standard</p>
+        <p class="eyebrow">Media Kit · Speaker &amp; Advisor</p>
+        <h1>Ruvimbo<br><em>Rue</em> Karimazondo</h1>
+        <p class="tag">Protocol · Presence · Power</p>
+        <p class="role">Head of Protocol, speaker and advisor on diplomacy, etiquette and professional presence.</p>
+      </div>
+      <div class="hero__photo"><img src="assets/rue-standing.jpg" alt="Ruvimbo Karimazondo"></div>
+    </div>
+
+    <div class="bio">
+      <div>
+        <p class="eyebrow">Biography</p>
+        <p>Ruvimbo Karimazondo, known as Rue, is a Head of Protocol whose work sits at the meeting point of diplomacy, leadership and international relations. She manages high-level engagements, guides dignitaries and executives, and keeps the confidence that her role demands.</p>
+        <p>Through her LinkedIn series, <em>Business Etiquette with Rue</em>, she has become a respected voice on presence, communication and professional conduct.</p>
+      </div>
+      <div>
+        <p>Rue’s conviction is simple: protocol isn’t just ceremony. It shapes how trade deals are struck, how economies are represented and how leaders are remembered.</p>
+        <p>She is also the Founder and CEO of Bénie, home to Bénie Events Management and Bénie Liquor Supplies.</p>
+        <p class="quote">“Your professional presence speaks before you do.”<span>Rue</span></p>
+      </div>
+    </div>
+
+    <div class="strip">
+      <figure><img src="assets/gallery/foreign-affairs.jpg" alt=""><figcaption>Ministry of Foreign Affairs &amp; International Trade, Zimbabwe</figcaption></figure>
+      <figure><img src="assets/gallery/investiture-dangote.jpg" alt=""><figcaption>Afreximbank Investiture 2025</figcaption></figure>
+      <figure><img src="assets/gallery/victoria-falls-flag.jpg" alt="" style="object-position:50% 30%"><figcaption>Forum for Portfolio Managers, Victoria Falls</figcaption></figure>
+      <figure><img src="assets/gallery/leading-session.jpg" alt="" style="object-position:50% 20%"><figcaption>Protocol Awareness Session, Afreximbank</figcaption></figure>
+    </div>
+
+    <div class="award">
+      <div>
+        <p class="eyebrow">Award &amp; Recognition</p>
+        <h3>Iconic International Executive Honour Award</h3>
+        <p>Recipient, and invited high-level panel speaker at the <strong>Iconic International Summit</strong>, 11–16 February 2027.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Business Excellence Awards Zimbabwe</p>
+        <p><strong>Most Innovative Director in Business Operations</strong></p>
+        <p><strong>Most Trusted Brand in Customer Satisfaction</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="frame"></div>
+    <div class="p2">
+      <div class="cols">
+        <div>
+          <p class="eyebrow">Speaking</p>
+          <h2>Signature Topics</h2>
+          <ol class="topics">
+            <li><div><strong>Protocol as Power</strong><span>Why presence and etiquette shape economic and diplomatic outcomes.</span></div></li>
+            <li><div><strong>Your Professional Presence Speaks Before You Do</strong><span>The silent language of leadership.</span></div></li>
+            <li><div><strong>Networking with Intent</strong><span>Building relationships that create opportunity.</span></div></li>
+            <li><div><strong>Boardroom Etiquette for Leaders</strong><span>Conduct, precedence and poise where decisions are made.</span></div></li>
+            <li><div><strong>Diplomacy in Business</strong><span>Lessons from international relations.</span></div></li>
+            <li><div><strong>The Standard of Excellence</strong><span>Leadership, discretion and influence.</span></div></li>
+          </ol>
+          <div class="featured">
+            <p class="eyebrow">Featured Panel · Iconic International Summit 2027</p>
+            <h3>Developing Africa from a business and economic perspective</h3>
+            <p>How African countries can collaborate, create opportunities and drive sustainable growth, through the lens of diplomacy, protocol and international relations.</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Formats</p>
+          <ul class="chips"><li>Keynotes</li><li>Panels</li><li>Masterclasses</li><li>Fireside Chats</li><li>Moderation</li><li>Hosting</li></ul>
+          <p class="eyebrow">Advisory &amp; Services</p>
+          <ul class="svc">
+            <li><strong>Protocol &amp; Diplomacy Advisory</strong>Official visits, precedence, seating, flags, forms of address and VIP handling.</li>
+            <li><strong>Business Etiquette Training</strong>Workshops on presence, communication, meetings and networking.</li>
+            <li><strong>Event Management</strong>Protocol-led summits, state and official functions, and corporate occasions.</li>
+            <li><strong>Brand Management</strong>Personal and corporate brand positioning for leaders.</li>
+          </ul>
+          <p class="eyebrow">In the Room</p>
+          <ul class="rooms">
+            <li>Afreximbank Investiture 2025</li>
+            <li>Afreximbank Forum for Portfolio Managers, Victoria Falls 2026</li>
+            <li>Afreximbank Trade Finance Seminar &amp; Compliance Forum, Gaborone 2026</li>
+            <li>Intra-African Trade Fair (IATF) 2025, Algeria</li>
+            <li>Presidential Inauguration Ceremony</li>
+            <li>Ministry of Foreign Affairs and International Trade, Zimbabwe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Book Rue</p>
+        <h3>Let’s raise the <em>standard</em>.</h3>
+        <p class="fees">Fees on request · Available worldwide, in person and virtually</p>
+      </div>
+      <div>
+        <p><a href="mailto:bookings@theruestandard.com">bookings@theruestandard.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ruvimbo-karimazondo">linkedin.com/in/ruvimbo-karimazondo</a></p>
+        <p>Instagram &amp; TikTok: <a href="https://www.instagram.com/thisissrue">@ThisissRue</a></p>
+        <p>#BusinessEtiquetteWithRue</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
