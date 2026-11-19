@@ -12,11 +12,6 @@ const CONFIG = {
   CONTACT_EMAIL: "bookings@theruestandard.com",
   FORM_ENDPOINT: "",
   LINKEDIN_URL: "https://www.linkedin.com/in/ruvimbo-karimazondo",
-  // Payment links. Paste your hosted payment page URLs here, e.g. a Paynow
-  // payment link (Visa/Mastercard) and a PayPal.Me or PayPal invoice link.
-  // While empty, the buttons take visitors to the booking form instead.
-  PAY_CARD_URL: "",
-  PAY_PAYPAL_URL: "",
   // WhatsApp number for the floating Concierge button, digits only with
   // country code (e.g. "263771234567"). Leave empty to hide the button.
   WHATSAPP_NUMBER: "",
@@ -36,22 +31,6 @@ const CONFIG = {
     concierge.href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
     concierge.hidden = false;
   }
-
-  // Payment buttons
-  document.querySelectorAll("[data-pay]").forEach((a) => {
-    const url = a.dataset.pay === "card" ? CONFIG.PAY_CARD_URL : CONFIG.PAY_PAYPAL_URL;
-    if (url) {
-      a.href = url; a.target = "_blank"; a.rel = "noopener";
-    } else {
-      a.addEventListener("click", () => {
-        const st = document.querySelector(".form__status");
-        if (st) {
-          st.textContent = "Online payment opens once your booking is confirmed. Send your enquiry and we’ll include a secure payment link with your invoice.";
-          st.className = "form__status ok";
-        }
-      });
-    }
-  });
 
   // Nav: scrolled state + mobile menu
   const nav = document.querySelector(".nav");
@@ -165,7 +144,7 @@ const CONFIG = {
         });
         if (!res.ok) throw new Error(res.status);
         form.reset(); updateExtra();
-        setStatus("Thank you. Your enquiry has been received — Rue’s team will be in touch within two working days.", "ok");
+        setStatus("Thank you. Your enquiry has been received. Rue’s team will be in touch within two working days.", "ok");
       } catch (err) {
         setStatus(`Sorry, something went wrong. Please email ${CONFIG.CONTACT_EMAIL} directly.`, "err");
       } finally {
