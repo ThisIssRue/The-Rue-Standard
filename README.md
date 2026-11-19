@@ -2,7 +2,7 @@
 
 *Presence. Poise. Power.*
 
-The website for Ruvimbo Karimazondo (Rue): a personal brand page for speaking invitations, etiquette, executive presence and brand. It takes enquiries only, with no bookings or payments.
+The website for Ruvimbo Karimazondo (Rue): a personal brand page for speaking invitations, etiquette, executive presence and brand. Speaking (confirmed per event), executive presence coaching and brand management can be booked and paid; etiquette training is by enquiry only.
 
 It is a static site (`index.html`, `styles.css`, `script.js`) with no build step, so it can be hosted on GitHub Pages, Netlify or any web host.
 
@@ -14,6 +14,8 @@ Open `script.js` and edit the `CONFIG` block at the top:
 | --- | --- |
 | `CONTACT_EMAIL` | The address booking enquiries go to (currently bookings@theruestandard.com). |
 | `FORM_ENDPOINT` | Optional. Paste a [Formspree](https://formspree.io) (or similar) form URL so enquiries are sent straight from the page. If you leave it empty, the visitor's email app opens with the enquiry already written. |
+| `PAY_CARD_URL` | A hosted card payment link (Visa/Mastercard), e.g. from Paynow. Empty = button points visitors to the booking form. |
+| `PAY_PAYPAL_URL` | A PayPal.Me or PayPal payment link. Empty = button points visitors to the booking form. |
 | `WHATSAPP_NUMBER` | Digits only with country code (e.g. `263771234567`). Shows the floating Concierge WhatsApp button. Empty = hidden. |
 | `LINKEDIN_URL` | Rue's LinkedIn profile URL. |
 
