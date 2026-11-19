@@ -251,6 +251,7 @@ strong { font-weight: 500; }
 .moment__body h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
 .moment__body p:last-child { color: var(--muted); margin: 0; }
 .shots { columns: 3 300px; column-gap: 20px; }
+.shots--two { columns: 2 300px; max-width: 760px; }
 .shot { break-inside: avoid; margin: 0 0 20px; border: 1px solid var(--line); background: var(--bg-2); transition: border-color .3s; }
 .shot:hover { border-color: var(--gold); }
 .shot__btn { all: unset; display: block; cursor: zoom-in; overflow: hidden; }

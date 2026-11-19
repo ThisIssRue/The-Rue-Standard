@@ -2,7 +2,7 @@
 
 *Protocol. Presence. Power.*
 
-The website for Ruvimbo Karimazondo (Rue): speaking engagements, protocol & diplomacy advisory, business etiquette training, event management and brand management.
+The website for Ruvimbo Karimazondo (Rue): speaking engagements, business etiquette training, executive presence coaching, events (through Bénie) and brand management.
 
 It is a static site (`index.html`, `styles.css`, `script.js`) with no build step, so it can be hosted on GitHub Pages, Netlify or any web host.
 
@@ -21,10 +21,10 @@ Open `script.js` and edit the `CONFIG` block at the top:
 
 ### Photos
 - **Photos:** portraits and episode posters live in `assets/` (`rue-*.jpg`, `episode-0N.jpg`). To add a new episode, save its poster as `assets/episode-06.jpg` and copy one of the episode buttons in `index.html`.
-- **In the Room gallery:** event photos live in `assets/gallery/`. To add one, save the photo there and copy one of the `<figure class="shot">` blocks in the `#media` section of `index.html`, then update its caption.
+- **Media & Recognition gallery:** event photos live in `assets/gallery/`. To add one, save the photo there and copy one of the `<figure class="shot">` blocks in the `#media` section of `index.html`, then update its caption.
 
 ### Booking links
-Any link to `#book` with `data-service="speaking|protocol|etiquette|events|brand|media"` selects that service in the booking form. `?service=brand#book` works in shared URLs too.
+Any link to `#book` with `data-service="speaking|coaching|etiquette|events|brand|media"` selects that service in the booking form. `?service=brand#book` works in shared URLs too.
 
 ## Publishing on GitHub Pages
 Repository **Settings → Pages → Deploy from a branch**, then choose the branch and the `/ (root)` folder.
@@ -34,3 +34,6 @@ Repository **Settings → Pages → Deploy from a branch**, then choose the bran
 
 ## Link previews and search
 `index.html` has Open Graph, Twitter and schema.org tags using `https://thisissrue.github.io/The-Rue-Standard/`. If the site moves to its own domain (e.g. theruestandard.com), replace that address everywhere in the `<head>`. The share image is `assets/share-card.jpg` (1200×630).
+
+## Independence from employment
+The site is deliberately kept separate from Rue's employment: no employer names, job title, work events or work photos, and no government, diplomatic or official protocol services. Keep new content to that rule.
